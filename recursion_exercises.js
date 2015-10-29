@@ -94,3 +94,16 @@ Array.prototype.merge_sort = function() {
 
   return merge(left_half.merge_sort(), right_half.merge_sort());
 }
+
+Array.prototype.subsets = function() {
+
+  if (this.length === 0)
+    return [[]];
+
+  var lastElement = this.slice(-1)[0];
+  var prevSubs = this.slice(0,-1).subsets();
+  debugger
+  return prevSubs.concat(prevSubs.map(function(el) {
+    return el.concat([lastElement]);
+  }));
+}

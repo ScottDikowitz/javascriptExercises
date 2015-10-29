@@ -102,7 +102,7 @@ Array.prototype.subsets = function() {
 
   var lastElement = this.slice(-1)[0];
   var prevSubs = this.slice(0,-1).subsets();
-  debugger
+
   return prevSubs.concat(prevSubs.map(function(el) {
     return el.concat([lastElement]);
   }));

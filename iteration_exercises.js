@@ -1,5 +1,5 @@
 Array.prototype.bubble_sort = function () {
-  var dup = this.slice(0)
+  var dup = this.slice(0);
 
   for (var x = dup.length - 1; x >= 0; x--) {
     for (var y = 0; y < dup.length; y++) {
@@ -11,8 +11,8 @@ Array.prototype.bubble_sort = function () {
     }
   }
 
-  return dup
-}
+  return dup;
+};
 
 String.prototype.substrings = function() {
   var sub_strs = [];
